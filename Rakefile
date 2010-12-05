@@ -1,5 +1,6 @@
 require 'rubygems'
 require 'rake'
+require 'rspec/core/rake_task'
 
 begin
   require 'jeweler'
@@ -10,19 +11,15 @@ begin
     gem.email = "andy@andy-pearson.com"
     gem.homepage = "http://github.com/andypearson/happy-nav"
     gem.authors = ["Andy Pearson"]
-    gem.add_development_dependency "thoughtbot-shoulda", ">= 0"
-    # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new
 rescue LoadError
   puts "Jeweler (or a dependency) not available. Install it with: gem install jeweler"
 end
 
-require 'rake/testtask'
-Rake::TestTask.new(:test) do |test|
-  test.libs << 'lib' << 'test'
-  test.pattern = 'test/**/test_*.rb'
-  test.verbose = true
+desc 'Test the happ-nav plugin.'
+RSpec::Core::RakeTask.new('spec') do |t|
+  t.pattern = FileList['spec/**/*_spec.rb']
 end
 
 begin
@@ -37,10 +34,6 @@ rescue LoadError
     abort "RCov is not available. In order to run rcov, you must: sudo gem install spicycode-rcov"
   end
 end
-
-task :test => :check_dependencies
-
-task :default => :test
 
 require 'rake/rdoctask'
 Rake::RDocTask.new do |rdoc|
