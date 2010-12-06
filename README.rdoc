@@ -1,6 +1,6 @@
 = happy-nav
 
-Description goes here.
+Happy Nav is the easy (and cheerful) way to create structured HTML for you site navigation.
 
 == Note on Patches/Pull Requests
  

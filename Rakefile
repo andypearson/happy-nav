@@ -6,8 +6,8 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "happy-nav"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
+    gem.summary = %Q{Happy Nav is the easy (and cheerful) way to create structured HTML for you site navigation.}
+    gem.description = %Q{Happy Nav is the easy (and cheerful) way to create structured HTML for you site navigation.}
     gem.email = "andy@andy-pearson.com"
     gem.homepage = "http://github.com/andypearson/happy-nav"
     gem.authors = ["Andy Pearson"]
