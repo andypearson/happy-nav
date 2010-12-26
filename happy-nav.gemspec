@@ -23,6 +23,7 @@ Gem::Specification.new do |s|
      "README.rdoc",
      "Rakefile",
      "VERSION",
+     "happy-nav.gemspec",
      "init.rb",
      "lib/happy-nav.rb",
      "lib/happy-nav/navigation_presenter.rb",
